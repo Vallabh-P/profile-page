@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Urbanist:ital,wght@0,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap');
 
 body {
-    font-family: "Nunito", sans-serif;
+    font-family: "Poppins", sans-serif;
     background-color: #f0f0f0;
     display: flex;
     justify-content: center;
@@ -9,18 +9,18 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0 10px;
-    overflow: auto; 
+    overflow: auto;
 }
 
 .popup {
     width: 100%;
-    max-width: 700px;
+    max-width: 750px;
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
-    /* background-color: #fff; */
+    background-color: #F8EDED;
 }
 
 .left-section, .right-section {
@@ -41,14 +41,14 @@ body {
 }
 
 .left-section img {
-    width: 80px;
-    height: 80px;
+    width: 87%;
+    height: auto;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
 }
 
 .left-section p {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     color: #333;
     text-align: center;
@@ -59,18 +59,16 @@ body {
     flex-direction: column;
     height: auto;
     width: 100%;
-    margin-left: 5%;
 }
 
 .profile-detail, .xership-program {
-    margin: 10px 0 10px 0;
-    padding-left: 4px;
+    margin: 10px 0;
 }
 
 .profile-detail h3, .xership-program h3 {
-    margin: 0 0 8px 0;
+    margin: 0 0 14px 0;
     font-size: 20px;
-    font-weight: 650;
+    font-weight: 700;
     color: #212121;
 }
 
@@ -85,42 +83,74 @@ body {
 }
 
 .profile-detail h4 {
-    margin: 8px 0 5px 0;
-    font-size: 15px;
+    margin: 11px 0 8px 0;
+    font-size: 17px;
     color: #00000075;
 }
 
 .profile-detail p, .xership-program p {
-    margin: 2px 0;
+    margin: 3px 0;
     font-size: 13px;
     color: #333;
 }
 
 .xership-program .stats {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    flex-direction: row;
 }
 
 .stats .stat {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     width: 30%;
-    padding: 5px;
+    padding: 10px;
     text-align: center;
-    background-color: #f1f1f1;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
+    background-color: #f1f1f1;
+    flex-direction: row;
+}
+
+.stats .stat:nth-child(1) {
+    background-color: #EEE9DA;
+    margin-right: 13px;
+}
+
+.stats .stat:nth-child(2) {
+    background-color: #D2E9E9;
+}
+
+.stats .stat:nth-child(3) {
+    background-color: #D2E9E9;
+    margin-left: 13px;
+}
+
+.stats .stat img.stat-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.stats .stat .stat-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .stats .stat h4 {
-    margin: 3px 0;
-    font-size: 13px;
+    margin: 5px 0 0 3px;
+    font-size: 16px;
     color: #333;
 }
 
 .stats .stat p {
     margin: 0;
-    font-size: 11px;
+    font-size: 13px;
+    font-weight: 550;
     color: #666;
 }
 
@@ -158,8 +188,8 @@ body {
     }
 
     .left-section img {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
     }
 
     .profile-detail h3, .xership-program h3 {
@@ -185,8 +215,8 @@ body {
 
 @media (max-width: 480px) {
     .left-section img {
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
     }
 
     .profile-detail h3, .xership-program h3 {
@@ -194,18 +224,23 @@ body {
     }
 
     .profile-detail h4 {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .profile-detail p, .xership-program p {
-        font-size: 11px;
+        font-size: 10px;
+    }
+
+    .stats .stat {
+        width: 100%;
+        margin-bottom: 10px;
     }
 
     .stats .stat h4 {
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .stats .stat p {
-        font-size: 9px;
+        font-size: 8px;
     }
 }
